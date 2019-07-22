@@ -64,7 +64,17 @@ class Event
 		end
 	end
 
+	#Méthode qui permet d'afficher le détail d'un evènement
+	def to_s
 
+		puts ">Titre : #{self.title}"
+		puts ">Date de début : #{ self.start_date.strftime("%Y-%m-%d %H:%M")}"
+		puts ">Durée : #{self.duration} minutes"
+		puts ">Invités : #{ self.attendees.join(" , ")}"
+	
+	end
+
+	
 	def self.all
 		return @@all_events	
 	end
