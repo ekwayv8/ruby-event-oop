@@ -17,6 +17,21 @@ class User
 
 	end
 
+	#Methode qui permet de retrouver un utilisateur à l'aide de son adresse email
+	def self.find_by_email(email_user)
+
+		@@all_users.each  do |user|
+			if user.email == email_user
+
+		puts "voici l'age du User trouvé: #{user.age} ans"
+			end
+		end
+	end
+
+
+
+
+
 	#Methode de classe qui retourne le array all_users
 	def self.all
 		return @@all_users	
