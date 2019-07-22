@@ -1,4 +1,4 @@
-require "PRY"
+require "pry"
 
 
 class User
@@ -12,7 +12,7 @@ class User
 	#Méthode permettant d'initialiser la création des différents users
 	def initialize(email_to_save,age_to_save)
 		@email = email_to_save
-		@age = age_to_save.to_i
+		@age = age_to_save.to_i #Après penser à mettre une boucle pour bloquer l'utilisateur qui ne rentre pas le bon format
 		@@all_users << self
 
 	end
